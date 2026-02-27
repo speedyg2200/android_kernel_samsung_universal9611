@@ -21,4 +21,11 @@ jobs:
           wget http://security.ubuntu.com/ubuntu/pool/universe/n/ncurses/libtinfo5_6.3-2ubuntu0.1_amd64.deb
           sudo dpkg -i libtinfo5_6.3-2ubuntu0.1_amd64.deb
 
+      - name: Clone Kernel Source 
+        run: | 
+          git clone -b SomethingNew-15-OUI --single-branch --recurse-submodules https://github.com/speedyg2200/android_kernel_samsung_universal9611.git
+
+      - name: CD into kernel source
+        run: |
+          cd android_kernel_samsung_universal9611
 
